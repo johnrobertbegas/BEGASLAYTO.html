@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Resources</title>
+    <style>
+        /* General Reset and Styles */
+        body, h1, h2, h3, p { margin: 0; padding: 0; }
+        body { font-family: 'Arial', sans-serif; color: #333; background-color: #f9f9f9; line-height: 1.6; }
+        header { background-color: #3498db; color: #fff; padding: 20px 10px; text-align: center; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); }
+        header h1 { font-size: 2.5em; font-weight: bold; }
+        nav { display: flex; justify-content: center; background-color: #2980b9; padding: 10px 0; }
+        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 1.2em; transition: color 0.3s; }
+        nav a:hover { color: #ecf0f1; }
+        .main { margin: 20px; padding: 20px; background: #fff; border-radius: 5px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        footer { background-color: #2980b9; color: #fff; text-align: center; padding: 10px 0; margin-top: 20px; }
+        footer p { margin: 0; }
+        .content ul { list-style-type: disc; padding-left: 20px; }
+        .content li { margin-bottom: 0.5em; }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1em;
+            display: block;
+        }
+
+    </style>
+    <script>
+        function showContent(section) {
+            const sections = document.querySelectorAll(".content");
+            sections.forEach(sec => sec.style.display = "none");
+            document.getElementById(section).style.display = "block";
+        }
+        window.onload = () => showContent('intro');
+    </script>
+</head>
+<body>
+    <header>
+        <h1>ICT Resources</h1>
+        <p>Your Gateway to Information and Communication Technology</p>
+    </header>
+
+    <nav>
+        <a onclick="showContent('intro')">Home</a>
+        <a onclick="showContent('about')">About Us</a>
+        <a onclick="showContent('hardware')">Hardware</a>
+        <a onclick="showContent('software')">Software</a>
+        <a onclick="showContent('internet')">Internet & Networking</a>
+        <a onclick="showContent('security')">Cybersecurity</a>
+    </nav>
+
+    <section class="main">
+        <div id="intro" class="content">
+            <h2>Welcome to ICT Resources</h2>
+            <p>This website provides information and resources on various aspects of Information and Communication Technology (ICT).</p>
+        </div>
+
+        <div id="about" class="content" style="display: none;">
+            <h2>About Us</h2>
+            <p>This website was created by: Creator&Ideas:Begas,John Robert</p>
+        </div>
+
+        <div id="hardware" class="content" style="display: none;">
+            <h2>ICT Hardware</h2>
+            <img src="hardware.jpg" alt="ICT Hardware">
+            <ul>
+                <li>Computers (Desktops, Laptops, Servers)</li>
+                <li>Mobile Devices (Smartphones, Tablets)</li>
+                <li>Networking Hardware (Routers, Switches)</li>
+                <li>Peripherals (Printers, Scanners, etc.)</li>
+            </ul>
+        </div>
+
+        <div id="software" class="content" style="display: none;">
+            <h2>ICT Software</h2>
+            <img src="software.jpg" alt="ICT Software">
+            <ul>
+                <li>Operating Systems (Windows, macOS, Linux)</li>
+                <li>Applications (Word Processors, Spreadsheets, Databases)</li>
+                <li>Programming Languages (Python, Java, C++)</li>
+                <li>Software Development Tools</li>
+            </ul>
+        </div>
+
+        <div id="internet" class="content" style="display: none;">
+            <h2>Internet & Networking</h2>
+            <img src="networking.jpg" alt="Internet & Networking">
+            <ul>
+                <li>Network Topologies</li>
+                <li>Internet Protocols (IP, TCP)</li>
+                <li>Network Security (Firewalls, VPNs)</li>
+                <li>Cloud Computing</li>
+            </ul>
+        </div>
+
+        <div id="security" class="content" style="display: none;">
+            <h2>Cybersecurity</h2>
+            <img src="cybersec.jpg" alt="Cybersecurity">
+            <p>Learn about protecting yourself and your data online.</p>
+            <ul>
+                <li>Password Management</li>
+                <li>Phishing Awareness</li>
+                <li>Data Privacy</li>
+                <li>Malware Protection</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ICT Resources. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
